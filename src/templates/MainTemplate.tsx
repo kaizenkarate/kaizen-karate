@@ -2,6 +2,8 @@ import Footer from "@/components/global/Footer";
 import Header from "@/components/global/Header";
 import TopHeader from "@/components/global/TopHeader";
 import OnlyMobile from "./OnlyMobile";
+import FbBtn from "@/components/global/FbBtn";
+import InstaBtn from "@/components/global/InstaBtn";
 export default function MainTemplate({
   children,
 }: {
@@ -17,6 +19,8 @@ export default function MainTemplate({
       {/* Main Content */}
       <div className="md:mt-[1rem] mt-[2rem]">{children}</div>
       <OnlyMobile />
+      <FbBtn />
+       <InstaBtn />
       <Footer />
     </div>
   );
