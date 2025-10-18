@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebook, FaInstagram, FaMobile, FaWhatsapp } from "react-icons/fa";
+import { FaMobile, FaWhatsapp } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { MdDone } from "react-icons/md";
 import { MdEmail } from "react-icons/md";
@@ -122,13 +122,25 @@ const Footer = () => {
                 href={"https://www.facebook.com/kaizenkarateindia/"}
                 target="_blank"
               >
-                <FaFacebook size={20} className=" text-defined-yellow" />
+                <Image
+                  src="/images/fb.png"
+                  alt="fb-icon"
+                  width={32}
+                  height={32}
+                  className=" size-7"
+                />
               </Link>
               <Link
                 href={"https://www.instagram.com/kaizenkarate07"}
                 target="_blank"
               >
-                <FaInstagram size={20} className=" text-defined-yellow" />
+                <Image
+                  src="/images/insta.png"
+                  alt="fb-icon"
+                  width={32}
+                  height={32}
+                  className=" size-7"
+                />
               </Link>
             </div>
           </div>
