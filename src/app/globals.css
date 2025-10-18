@@ -10,6 +10,9 @@
 
   --shadow-defined-light: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1025px;
   --breakpoint-xlg: 90rem;
   --breakpoint-xxl: 120rem;
 
