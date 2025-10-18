@@ -1,7 +1,6 @@
-// import { ServiceData } from "@/lib/ServiceData";
 import Image from "next/image";
 import Link from "next/link";
-import { FaMobile, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaMobile, FaWhatsapp } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { MdDone } from "react-icons/md";
 import { MdEmail } from "react-icons/md";
@@ -43,12 +42,12 @@ const Footer = () => {
             />
           </div>
           <p className="text-sm text-justify">
-            Kaizen Karate-Do Association is Siliguri&apos;s premier karate academy,
-            offering authentic training in Traditional, Sports, and Women&apos;s
-            Self-Defense programs. Under expert 9th Dan leadership, we build
-            champions while instilling discipline, confidence, and life skills.
-            Join North Bengal&apos;s trusted martial arts community and embark on
-            your journey to physical mastery and mental strength in a
+            Kaizen Karate-Do Association is Siliguri&apos;s premier karate
+            academy, offering authentic training in Traditional, Sports, and
+            Women&apos;s Self-Defense programs. Under expert leadership, we
+            build champions while instilling discipline, confidence, and life
+            skills. Join North Bengal&apos;s trusted martial arts community and
+            embark on your journey to physical mastery and mental strength in a
             supportive, professional environment.
           </p>
         </div>
@@ -97,7 +96,11 @@ const Footer = () => {
                 <MdEmail size={20} className=" text-defined-yellow" />{" "}
                 <span>kaizenkarateindia@gmail.com</span>
               </Link>
-              <Link href={"https://maps.app.goo.gl/HEwGqv7P5KVNN2Dz6"} className="flex gap-2 w-full " target="_blank">
+              <Link
+                href={"https://maps.app.goo.gl/HEwGqv7P5KVNN2Dz6"}
+                className="flex gap-2 w-full "
+                target="_blank"
+              >
                 <IoLocationSharp
                   size={20}
                   className=" text-defined-yellow shrink-0"
@@ -108,7 +111,27 @@ const Footer = () => {
                 </span>
               </Link>
             </div>
-          </div>          
+          </div>
+
+          <div className="flex flex-col gap-4 w-full">
+            <h2 className=" lg:text-xl text-2xl xlg:text-2xl font-semibold text-white">
+              Follow Us
+            </h2>
+            <div className="flex gap-4">
+              <Link
+                href={"https://www.facebook.com/kaizenkarateindia/"}
+                target="_blank"
+              >
+                <FaFacebook size={20} className=" text-defined-yellow" />
+              </Link>
+              <Link
+                href={"https://www.instagram.com/kaizenkarate07"}
+                target="_blank"
+              >
+                <FaInstagram size={20} className=" text-defined-yellow" />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
 
