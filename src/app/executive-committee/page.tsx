@@ -7,7 +7,7 @@ const page = () => {
   const members = [
     {
       photo: "/images/Sanjay tibruwal.jpg",
-      name: "Sri Sanjay Tibrewal",
+      name: "Shri Sanjay Tibrewal",
       district: "Siliguri",
       designation: "Patron",
     },
@@ -25,7 +25,7 @@ const page = () => {
     },
     {
       photo: "/images/Shri. Sandeep Ghosal.jpg",
-      name: "Shri. Sandeep Ghosal",
+      name: "Shri Sandeep Ghosal",
       district: "Siliguri",
       designation: "Vice President (VP)",
     },
