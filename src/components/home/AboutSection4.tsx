@@ -20,8 +20,8 @@ const AboutSection4 = () => {
     };
   }, []);
   return (
-    <section className="flex flex-col md:flex-row w-full h-auto justify-between gap-8">
-      <div className="w-full md:w-[40%] h-full rounded-xl">
+    <section className="flex flex-col lg:flex-row w-full h-auto justify-between gap-8">
+      <div className="w-full xlg:w-[40%] h-full rounded-xl">
         <Image
           src="/images/abs4.png"
           alt="about-4"
@@ -33,7 +33,7 @@ const AboutSection4 = () => {
         />
       </div>
       <div
-        className="w-full md:w-[60%] h-full flex flex-col gap-2"
+        className="w-full xlg:w-[60%] h-full flex flex-col gap-2"
         ref={leftSideRef}
       >
         <h1 className="text-2xl font-bold text-defined-purple">
