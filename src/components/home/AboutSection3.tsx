@@ -37,9 +37,9 @@ const AboutSection3 = () => {
     },
   ];
   return (
-    <section className="flex flex-col md:flex-row w-full h-auto justify-between gap-8">
+    <section className="flex flex-col lg:flex-row w-full h-auto justify-between gap-8">
       <div
-        className="w-full md:w-[60%] h-full flex flex-col gap-4"
+        className="w-full xlg:w-[60%] h-full flex flex-col gap-4"
         ref={leftSideRef}
       >
         <h1 className="text-2xl font-bold text-defined-purple">
@@ -57,7 +57,7 @@ const AboutSection3 = () => {
           ))}
         </div>
       </div>
-      <div className="w-full md:w-[40%] h-full rounded-xl">
+      <div className="w-full xlg:w-[40%] h-full rounded-xl">
         <Image
           src="/images/abs3.jpg"
           alt="about-3"
