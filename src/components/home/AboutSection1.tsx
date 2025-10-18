@@ -27,21 +27,21 @@ const AboutSection1 = () => {
   }, []);
 
   return (
-    <section className="flex flex-col md:flex-row w-full h-auto justify-between gap-8">
-      <div className="w-full md:w-[40%] h-full rounded-xl">
+    <section className="flex flex-col lg:flex-row w-full h-auto justify-between gap-8">
+      <div className="w-full lg:w-[40%] h-full rounded-xl">
         <Image
-          src="/images/abs1.jpg"
+          src="/images/abs1.avif"
           alt="about-1"
           width={500}
           height={500}
-          className=" w-full h-full object-cover rounded-xl"
+          className=" w-full h-full object-contain rounded-xl"
           priority
           style={{ height: isSmallScreen ? "auto" : `${rightSideHeight}px` }}
         />
       </div>
 
       <div
-        className="w-full md:w-[60%] h-full flex flex-col gap-4"
+        className="w-full lg:w-[60%] h-full flex flex-col gap-4"
         ref={leftSideRef}
       >
         <h1 className="text-2xl font-bold text-defined-purple">
