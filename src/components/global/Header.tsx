@@ -88,8 +88,8 @@ const Header = () => {
   return (
     <>
       <div
-        className={`flex justify-between items-center md:px-18 px-4 fixed h-[3.5rem] md:h-[6rem] w-full z-[60] bg-defined-purple shadow-defined-light ${
-          scrolled ? "top-0 " : "md:top-[7rem] top-0"
+        className={`flex justify-between  items-center  md:pl-18 px-4 fixed h-[3.5rem] md:h-[2.5rem] w-full z-[60]  ${
+          scrolled ? "top-0 " : "md:top-[7.5rem] top-0"
         }`}
       >
         {/* Logo */}
@@ -101,12 +101,12 @@ const Header = () => {
             width={1224}
             height={181}
             priority
-            className="w-[3rem] md:w-[5.5rem]"
+            className="w-[3rem] md:w-[4rem]"
           />
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex items-center justify-center gap-6 h-full w-auto bg-defined-purple">
+        <ul className="hidden w-full lg:flex items-center justify-end gap-6 h-full bg-defined-purple">
           {NavLinksData.map((item, index) => (
             <li
               key={index}
@@ -117,7 +117,9 @@ const Header = () => {
                   <Link
                     href={item.href}
                     className={`${
-                      item.href === pathname ? "bg-white text-defined-purple" : "text-white"
+                      item.href === pathname
+                        ? "bg-white text-defined-purple"
+                        : "text-white"
                     } hover:text-defined-purple hover:bg-white transition-all duration-300 px-3 py-1 rounded-3xl`}
                   >
                     {item.text}
@@ -127,9 +129,7 @@ const Header = () => {
                 <div className="relative group">
                   <span
                     className={`${
-                      isActive(item.href)
-                        ? "text-white"
-                        : "text-white"
+                      isActive(item.href) ? "text-white" : "text-white"
                     } capitalize cursor-pointer`}
                   >
                     {item.text}
@@ -162,14 +162,16 @@ const Header = () => {
               )}
             </li>
           ))}
+          {/* Desktop button */}
+          <div>
+            <button
+              onClick={toggleAppointmentModal}
+              className="hidden lg:block bg-white text-defined-purple  font-semibold h-[2.5rem] px-4 text-nowrap"
+            >
+              Admission Today
+            </button>
+          </div>
         </ul>
-        {/* Desktop button */}
-        <button
-          onClick={toggleAppointmentModal}
-          className="hidden lg:block rounded-3xl bg-white text-defined-purple  font-semibold h-[2.5rem] px-4"
-        >
-          Admission Today
-        </button>
 
         {/* Mobile Menu Icon */}
         <button
@@ -180,8 +182,8 @@ const Header = () => {
         >
           <svg width="0" height="0">
             <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#fff" />
-              <stop offset="100%" stopColor="#fff" />
+              <stop offset="0%" stopColor="#28156F" />
+              <stop offset="100%" stopColor="#28156F" />
             </linearGradient>
           </svg>
           <span

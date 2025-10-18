@@ -1,5 +1,3 @@
-import useElementHeight from "@/hooks/useElementHeight";
-import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const ClassSection = () => {
@@ -33,22 +31,7 @@ const ClassSection = () => {
       
       imageUrl: "/images/class4.jpg",
     },
-  ];
-  const [rightSideHeight, leftSideRef] = useElementHeight<HTMLDivElement>();
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 768);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  ]; 
   return (
     <div className="flex flex-col justify-center items-center gap-8">
       {classes.map((classItem, index) => (
@@ -63,14 +46,12 @@ const ClassSection = () => {
               width={500}
               height={500}
               className=" w-full h-full object-cover rounded-xl"
-              style={{
-                height: isSmallScreen ? "auto" : `${rightSideHeight}px`,
-              }}
+              
             />
           </div>
           <div
             className="w-full md:w-[60%] h-full flex flex-col gap-2"
-            ref={leftSideRef}
+           
           >
             <h1 className="text-2xl font-bold text-defined-purple">
               {classItem.title}
