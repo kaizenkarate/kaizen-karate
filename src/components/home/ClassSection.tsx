@@ -22,14 +22,15 @@ const ClassSection = () => {
       title:
         "Practical Self Defence: Building Confidence, Security, and Independence for Women.",
       detail:
-        "In Karate, every belt color represents a stage of personal growth, skill, and discipline. At Kaizen Karate-Do Association India, we follow a structured and internationally recognized grading system that guides each student step-by-step from beginner to master.",
+        "Our specialized Self Defence for Women class provides essential, practical training focused on real-world scenarios. We recognize the utmost need for every individual to feel secure and in control. This program is built upon the principles of Goju-ryu, utilizing techniques that emphasize efficiency, leverage, and practical application, regardless of size or strength. The curriculum is designed to go beyond basic blocks and strikes. We teach vital life skills such as situational awareness, boundary setting, how to differentiate good or bad touch, and most importantly, how to stand up for yourself. The training is structured to build confidence and self-esteem, empowering participants to be alert, secure, and independent. We aim to make every participant physically fit and mentally ready to face any situation where self-defense plays a major role. By focusing on simple yet highly effective defenses against common attacks, we equip women and girls with the knowledge to protect their own bodies and navigate their world with security. Join this class to feel truly prepared and confident in your ability to take care of yourself.",
       imageUrl: "/images/class3.jpg",
     },
      {
       title:
         "Karate Belt Ranking System: The Journey from White to Black Belt",
-      detail:
-        "Our specialized Self Defence for Women class provides essential, practical training focused on real-world scenarios. We recognize the utmost need for every individual to feel secure and in control. This program is built upon the principles of Goju-ryu, utilizing techniques that emphasize efficiency, leverage, and practical application, regardless of size or strength. The curriculum is designed to go beyond basic blocks and strikes. We teach vital life skills such as situational awareness, boundary setting, how to differentiate good or bad touch, and most importantly, how to stand up for yourself. The training is structured to build confidence and self-esteem, empowering participants to be alert, secure, and independent. We aim to make every participant physically fit and mentally ready to face any situation where self-defense plays a major role. By focusing on simple yet highly effective defenses against common attacks, we equip women and girls with the knowledge to protect their own bodies and navigate their world with security. Join this class to feel truly prepared and confident in your ability to take care of yourself.",
+       detail:
+        "In Karate, every belt color represents a stage of personal growth, skill, and discipline. At Kaizen Karate-Do Association India, we follow a structured and internationally recognized grading system that guides each student step-by-step from beginner to master.",
+      
       imageUrl: "/images/class4.jpg",
     },
   ];
