@@ -40,7 +40,7 @@ const AboutSection2 = () => {
   ]
 
   return (
-    <section className=" relative flex flex-col md:flex-row justify-between gap-4 items-end">
+    <section className=" relative flex flex-col lg:flex-row justify-between gap-4 items-end">
        <div className="absolute inset-0">
               <Image
                 src="/images/homepageimage.jpg"
