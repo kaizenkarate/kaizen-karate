@@ -1,10 +1,10 @@
-import SubBanner from "@/components/global/SubBanner";
+// import SubBanner from "@/components/global/SubBanner";
 import MainTemplate from "@/templates/MainTemplate";
 
 const page = () => {
   return (
     <MainTemplate>
-      <SubBanner heading="Video" />
+      {/* <SubBanner heading="Video" /> */}
       {/* Your Work here  */}
       <section className="self-padding">
        
