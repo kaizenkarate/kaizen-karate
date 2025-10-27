@@ -1,4 +1,4 @@
-import SubBanner from '@/components/global/SubBanner';
+// import SubBanner from '@/components/global/SubBanner';
 import MainTemplate from '@/templates/MainTemplate'
 import Image from 'next/image';
 
@@ -38,7 +38,7 @@ const page = () => {
 
   return (
     <MainTemplate>
-      <SubBanner heading="District Incharge" />      
+      {/* <SubBanner heading="District Incharge" />       */}
       {/* Your Work here  */}
       <div className="self-padding rounded-xl overflow-hidden shadow-lg border border-gray-200">
      

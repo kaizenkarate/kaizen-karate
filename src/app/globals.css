@@ -20,6 +20,16 @@
 
 @layer base {
 
+  .clip-angled {
+  /* The core magic — cut one corner diagonally */
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);  
+}
+  .clip-angled2 {
+  /* The core magic — cut one corner diagonally */
+  clip-path: polygon(10 0, 100% 0, 95% 100%, 0 100%);  
+}
+
+
   .self-padding {
     @apply md:px-18 px-4 py-8 flex flex-col gap-12;
   }

@@ -1,4 +1,4 @@
-import SubBanner from '@/components/global/SubBanner';
+// import SubBanner from '@/components/global/SubBanner';
 import MainTemplate from '@/templates/MainTemplate'
 import Image from 'next/image';
 import React from 'react'
@@ -33,7 +33,7 @@ const page = () => {
 
   return (
     <MainTemplate>
-      <SubBanner heading="Board Comittee" />
+      {/* <SubBanner heading="Board Comittee" /> */}
       {/* Your Work here  */}
       <div className="self-padding rounded-xl overflow-hidden shadow-lg border border-gray-200">
      

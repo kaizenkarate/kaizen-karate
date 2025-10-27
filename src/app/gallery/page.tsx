@@ -1,6 +1,6 @@
 export const dynamic = "force-dynamic";
 import { getAllGallery } from "@/actions/gallery";
-import SubBanner from "@/components/global/SubBanner";
+// import SubBanner from "@/components/global/SubBanner";
 import { GalleryDocument } from "@/models/Gallery";
 import MainTemplate from "@/templates/MainTemplate";
 import Image from "next/image";
@@ -10,7 +10,7 @@ const page = async () => {
   const gallery = await getAllGallery(1,0);
   return (
     <MainTemplate>
-      <SubBanner heading="Gallery" />
+      {/* <SubBanner heading="Gallery" /> */}
 
       {/* Your Work here  */}
       <section className="self-padding">

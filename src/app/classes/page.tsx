@@ -1,4 +1,4 @@
-import SubBanner from '@/components/global/SubBanner';
+// import SubBanner from '@/components/global/SubBanner';
 import MainTemplate from '@/templates/MainTemplate'
 import EnquiryBoxSection from '@/components/home/EnquiryBoxSection';
 import ClassSection from '@/components/home/ClassSection';
@@ -8,7 +8,7 @@ const page = () => {
   
   return (
     <MainTemplate>
-      <SubBanner heading="Our Classes" />
+      {/* <SubBanner heading="Our Classes" /> */}
       <section className="self-padding">
         <div className="flex justify-between items-center">
           <h1 className="text-xl md:text-3xl font-bold text-defined-purple">

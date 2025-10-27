@@ -1,4 +1,4 @@
-import SubBanner from '@/components/global/SubBanner';
+// import SubBanner from '@/components/global/SubBanner';
 import FormCard from '@/components/ui/FormCard';
 import MainTemplate from '@/templates/MainTemplate'
 import Link from 'next/link';
@@ -48,7 +48,7 @@ const page = () => {
       ];
   return (
     <MainTemplate>
-      <SubBanner heading="Contact Us" />
+      {/* <SubBanner heading="Contact Us" /> */}
       <section className="self-padding">
         <div className="flex flex-col gap-4">
           <h1 className="text-xl md:text-3xl text-defined-purple">

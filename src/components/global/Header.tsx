@@ -88,90 +88,82 @@ const Header = () => {
   return (
     <>
       <div
-        className={`flex justify-between  items-center  md:pl-18 px-4 fixed h-[3.5rem] md:h-[2.5rem] w-full z-[60]  ${
+        className={`flex justify-between  items-center fixed h-[3.5rem] md:h-[3.5rem] w-full z-[60]  ${
           scrolled ? "top-0 " : "md:top-[7.5rem] top-0"
         }`}
       >
         {/* Logo */}
 
-        <Link href={"/"} className="">
-          <Image
-            src={"/logo.png"}
-            alt="logo"
-            width={1224}
-            height={181}
-            priority
-            className="w-[3rem] md:w-[4rem]"
-          />
-        </Link>
+        <div className="w-full flex items-center relative">          
+          <Link
+            href={"/"}
+            className="flex clip-angled rounded-br-4xl items-center justify-center py-2 md:w-[16rem] w-[3rem] bg-[#E20D2B] relative z-20"
+          >
+            <Image
+              src={"/logo.png"}
+              alt="logo"
+              width={1224}
+              height={181}
+              priority
+              className="w-[3rem] md:w-[4rem]"
+            />
+          </Link>
 
-        {/* Desktop Menu */}
-        <ul className="hidden w-full lg:flex items-center justify-end gap-6 h-full bg-defined-purple">
-          {NavLinksData.map((item, index) => (
-            <li
-              key={index}
-              className="font-medium text-lg hover:scale-110 transition-all duration-500"
-            >
-              {item.href ? (
-                <div className="relative">
+        <div className="hidden lg:flex items-center justify-center absolute left-[5rem] w-[calc(100%-17rem)] h-[3.5rem] bg-[#F5F5F5] clip-angled2 -z-10 pointer-events-none" />
+
+          <ul className="hidden lg:flex items-center justify-center gap-6 relative z-20 mx-auto">
+            {NavLinksData.map((item, index) => (
+              <li
+                key={index}
+                className="font-medium relative text-lg hover:scale-110 transition-all duration-500"
+              >
+                {item.href ? (
                   <Link
                     href={item.href}
                     className={`${
                       item.href === pathname
-                        ? "bg-white text-defined-purple"
-                        : "text-white"
-                    } hover:text-defined-purple hover:bg-white transition-all duration-300 px-3 py-1 rounded-3xl`}
+                        ? "bg-defined-purple text-white"
+                        : "text-defined-purple"
+                    } hover:bg-defined-purple hover:text-white transition-all duration-300 px-3 py-1 rounded-3xl`}
                   >
                     {item.text}
                   </Link>
-                </div>
-              ) : (
-                <div className="relative group">
-                  <span
-                    className={`${
-                      isActive(item.href) ? "text-white" : "text-white"
-                    } capitalize cursor-pointer`}
-                  >
-                    {item.text}
-                  </span>
-                  {item.subMenu && item.subMenu.length > 0 && (
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 duration-500 transition-all origin-top-right opacity-0 group-hover:opacity-90 group-hover:border-t-2 group-hover:border-defined-yellow w-0 group-hover:w-auto  overflow-hidden flex rounded bg-white">
-                      <div className="flex flex-col gap-6 ">
-                        <ul className="flex flex-col">
-                          {item.subMenu.map(
-                            (
-                              item: { href: string; text: string },
-                              index: number
-                            ) => (
-                              <div className="flex flex-col p-2 " key={index}>
-                                <Link
-                                  href={item.href}
-                                  className="flex items-center gap-2 font-medium text-defined-purple hover:text-white  hover:bg-defined-purple px-4 py-2 rounded hover:scale-105 transition-all duration-300 text-nowrap text-sm"
-                                >
-                                  <span>&gt;</span>
-                                  {item.text}
-                                </Link>
-                              </div>
-                            )
-                          )}
-                        </ul>
+                ) : (
+                  <div className="relative group">
+                    <span className="text-defined-purple capitalize cursor-pointer">
+                      {item.text}
+                    </span>
+
+                    {/* Submenu */}
+                    {item.subMenu && item.subMenu.length > 0 && (
+                      <div className="absolute top-full left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:visible invisible duration-300 flex flex-col rounded bg-white shadow-md z-30 border-t-2 border-defined-yellow">
+                        {item.subMenu.map((sub, subIndex) => (
+                          <Link
+                            href={sub.href}
+                            key={subIndex}
+                            className="flex items-center gap-2 font-medium text-defined-purple hover:text-white hover:bg-defined-purple px-4 py-2 rounded transition-all duration-300 text-nowrap text-sm"
+                          >
+                            <span>&gt;</span>
+                            {sub.text}
+                          </Link>
+                        ))}
                       </div>
-                    </div>
-                  )}
-                </div>
-              )}
-            </li>
-          ))}
-          {/* Desktop button */}
-          <div>
+                    )}
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+
+          <div className="hidden lg:flex absolute top-4 right-2 h-[3.5rem] w-[14rem] bg-[#333333] clip-angled2 items-center justify-center z-10">
             <button
               onClick={toggleAppointmentModal}
-              className="hidden lg:block bg-white text-defined-purple  font-semibold h-[2.5rem] px-4 text-nowrap"
+              className="text-white font-semibold h-[2.5rem] px-4 text-nowrap relative z-20"
             >
               Admission Today
             </button>
           </div>
-        </ul>
+        </div>
 
         {/* Mobile Menu Icon */}
         <button

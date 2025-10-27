@@ -1,4 +1,4 @@
-import SubBanner from "@/components/global/SubBanner";
+// import SubBanner from "@/components/global/SubBanner";
 import MainTemplate from "@/templates/MainTemplate";
 import Image from "next/image";
 
@@ -19,7 +19,7 @@ const page = () => {
   ];
   return (
     <MainTemplate>
-      <SubBanner heading="Awards" />
+      {/* <SubBanner heading="Awards" /> */}
       {/* Your Work here  */}
       <section>
         <div className="flex flex-col gap-6 px-4 md:px-18 py-8">
