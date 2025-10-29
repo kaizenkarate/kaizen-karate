@@ -67,10 +67,11 @@ const Header = () => {
         </Link>
 
         {/* Background bar */}
-        <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 w-[calc(100%-17rem)] h-[3.5rem] bg-[#F5F5F5] clip-angled2 -z-10" />
+        {/* Background bar (always visible, not just lg) */}
+        <div className="absolute left-1/2 -translate-x-1/2 w-full lg:w-[calc(100%-17rem)] h-[3.5rem] bg-[#F5F5F5] clip-angled2 -z-10" />
 
-        {/* Nav Links */}
-        <ul className="hidden md:flex items-center justify-center gap-4 mx-auto relative z-20">
+        {/* Nav Links — hide on tablet and below */}
+        <ul className="hidden lg:flex items-center justify-center gap-6 mx-auto relative z-20">
           {NavLinksData.map((item, index) => (
             <li
               key={index}
@@ -89,9 +90,9 @@ const Header = () => {
                 </Link>
               ) : (
                 <div
-                  className="relative group md:cursor-pointer"
+                  className="relative group xl:cursor-pointer"
                   onClick={() => {
-                    // ✅ Allow click-to-toggle on tablet + large touch devices (width ≤ 2400px)
+                    // Allow click-to-toggle on tablet + large touch devices
                     if (window.innerWidth >= 768 && window.innerWidth <= 2400) {
                       setOpenDropdown(openDropdown === index ? null : index);
                     }
@@ -105,7 +106,7 @@ const Header = () => {
                       openDropdown === index
                         ? "opacity-100 visible"
                         : "opacity-0 invisible"
-                    } md:group-hover:opacity-100 md:group-hover:visible`}
+                    } xl:group-hover:opacity-100 xl:group-hover:visible`}
                   >
                     {item.subMenu?.map((sub, subIndex) => (
                       <Link
@@ -133,17 +134,17 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Menu Icon */}
+        {/* Mobile/Tablet Menu Icon */}
         <button
-          className="lg:hidden text-3xl text-defined-purple mr-4"
+          className="block lg:hidden text-3xl text-defined-purple mr-4"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <IoCloseSharp /> : <AiOutlineMenuFold />}
         </button>
 
-        {/* Mobile Menu */}
+        {/* Mobile / Tablet Menu */}
         {isMenuOpen && (
-          <div className="absolute top-full left-0 w-full bg-defined-purple/80 text-white backdrop-blur-xl p-6 lg:hidden max-h-[80vh] overflow-y-auto">
+          <div className="absolute top-full left-0 w-full bg-defined-purple/80 text-white backdrop-blur-xl p-6 md:block lg:hidden max-h-[80vh] overflow-y-auto">
             <ul className="flex flex-col gap-4">
               {NavLinksData.map((item, index) => (
                 <li key={index}>

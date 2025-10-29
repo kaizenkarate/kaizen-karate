@@ -36,9 +36,9 @@ const InfoSection = () => {
       if (window.innerWidth <= 460) {
         setSlidesToShow(1);
       } else if (window.innerWidth <= 860) {
-        setSlidesToShow(3);
+        setSlidesToShow(2);
       } else if (window.innerWidth <= 1024) {
-        setSlidesToShow(4);
+        setSlidesToShow(3);
       } else {
         setSlidesToShow(4);
       }
@@ -64,14 +64,15 @@ const InfoSection = () => {
             disableOnInteraction: false,
             reverseDirection: true,
           }}
+          className="!h-auto"
         >
           {infos.map((info, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className="!h-auto">
               <InfoCard {...info} index={index} />
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>      
+      </div>
     </section>
   );
 };
