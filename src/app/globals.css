@@ -31,7 +31,7 @@
 
 
   .self-padding {
-    @apply md:px-18 px-4 py-8 flex flex-col gap-12;
+    @apply md:px-18 px-4 py-16 flex flex-col gap-12;
   }
 
   html {

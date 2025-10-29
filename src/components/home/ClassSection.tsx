@@ -53,10 +53,10 @@ const ClassSection = () => {
             className="w-full md:w-[60%] h-full flex flex-col gap-2"
            
           >
-            <h1 className="text-2xl font-bold text-defined-purple">
+            <h1 className="text-2xl xlg:text-3xl font-bold text-defined-purple">
               {classItem.title}
             </h1>
-            <p className="text-defined-brown text-justify">
+            <p className="text-defined-brown text-justify xlg:text-2xl">
               {classItem.detail}
             </p>
           </div>

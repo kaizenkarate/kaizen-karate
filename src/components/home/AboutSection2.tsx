@@ -57,10 +57,10 @@ const AboutSection2 = () => {
         }}
       />
       <div
-        className="relative basis-full md:basis-[55%] h-full flex flex-col gap-4 text-white px-10 py-6"
+        className="relative basis-full md:basis-[55%] h-full flex flex-col self-start gap-8 text-white px-10 py-6"
         ref={leftSideRef}
       >
-        <p className="text-justify text-defined-purple">
+        <p className="text-justify text-defined-purple lg:text-xl xlg:text-3xl">
           Choose Kaizen Karate-Do for expert 9th Dan instruction, proven
           champion development, and holistic growth. As Siliguri&apos;s premier
           karate academy, we offer authentic training in Traditional Karate,
